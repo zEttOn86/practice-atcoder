@@ -9,14 +9,21 @@ int main()
     int x = 7%K;
     set<int> s;
     int i = 1;
-    while(s.count(x) == 0){//まだ訪れていない場合続ける
+    // while(s.count(x) == 0){//まだ訪れていない場合続ける
+    //     if(x==0){
+    //         cout << i << endl;
+    //         return 0;
+    //     }
+    //     s.insert(x);
+    //     x = (x*10+7)%K;
+    //     ++i;
+    // }
+    for(int i=1; i<=K; i++){
         if(x==0){
             cout << i << endl;
             return 0;
         }
-        s.insert(x);
         x = (x*10+7)%K;
-        ++i;
     }
     cout << -1 << endl;
     return 0;
