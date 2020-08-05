@@ -13,6 +13,13 @@ int main()
 {
     ll n;
     cin >> n;
-    cout << f(n) << endl;
+    string ans;
+    while(n){
+        n--;
+        ans += 'a'+n%26;
+        n/=26;
+    }
+    reverse(ans.begin(), ans.end());
+    cout << ans << endl;
     return 0;
 }
